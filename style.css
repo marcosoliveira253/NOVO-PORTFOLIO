@@ -69,7 +69,18 @@ nav {
 .ul li a {
     color: #ffffff;
     text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: bold;
 }
+
+.ul li a:hover{
+    background: linear-gradient(45deg, #ffffff, #f9004d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+
 
 .menu-icon {
     display: none;
