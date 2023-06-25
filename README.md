@@ -31,6 +31,10 @@ O arquivo JavaScript (script.js) adiciona interatividade ao site. Inclui as segu
 Sinta-se à vontade para explorar o site para saber mais sobre mim, minhas habilidades e meus projetos.<br> 
 Você pode clicar nos links de navegação para navegar pelas diferentes seções.<br> 
 O site é totalmente responsivo e pode ser visualizado em vários dispositivos e tamanhos de tela.
+
+# Link do portfólio
+https://portfolio-marcosoliveiradev.netlify.app/
+
 # Contato
 Se você tiver alguma dúvida ou pergunta, sinta-se à vontade para entrar em contato comigo:
 
