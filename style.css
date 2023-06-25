@@ -6,15 +6,15 @@
 
 body {
     font-family: 'Josefin Sans', sans-serif;
+    background: var(--background);
 }
 
 :root {
-    --header: linear-gradient(rgba(1, 1, 1, 0.774) 30%, rgba(43, 43, 42, 0.842) 100%);
+    --header: #312f2fbe;
     --vermelho: #f9004d;
     --link-menu: #060505ce;
     --menu-mobile: #050505d0;
-    --background: #000000;
-    --section: #000000;
+    --background: #222222;
     --degrade-btn: linear-gradient(#f9004d, #fc2586);
 }
 
@@ -36,6 +36,10 @@ footer {
 
 
 /* classes do site */
+header, 
+footer {
+    background: var(--header);
+}
 nav {
     display: flex;
     justify-content: space-between;
@@ -63,20 +67,38 @@ nav {
 
 .ul li {
     margin: 0 15px;
-    font-size: 15px;
+    font-size: 15px; 
 }
 
 .ul li a {
+    position: relative;
+    padding-bottom: 5px;/* Adciona um padding-bottom ao link */
     color: #ffffff;
     text-decoration: none;
     font-size: 1.3rem;
     font-weight: bold;
 }
 
-.ul li a:hover{
+.ul li a:hover {
     background: linear-gradient(45deg, #ffffff, #f9004d);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+.ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px; /* Ajusta a posição da linha */
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #f9004d;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+.ul li a:hover::after{
+    transform: scaleX(1);
 }
 
 
@@ -101,7 +123,7 @@ main .container,
 .main-text,
 .sobre-text {
     width: 50%;
-    color: #ffffff;
+    color: #FEFDFF;
 }
 
 .main-text h4,
@@ -119,18 +141,29 @@ main .container,
     margin-top: 20px;
 }
 
-.main-img,
-.sobre-img {
+.main-img {
     width: 50%;
 }
 
-.main-img img,
-.sobre-img img {
+.main-img img {
     width: 100%;
 }
 
 section {
     background: var(--background);
+}
+
+.sobre-img {
+    width: 40%;
+    height: 35vw;
+    background-color: #ddd;
+    border-radius: 50%;
+    border: 0.13em solid #f9004d;
+    overflow: hidden;
+}
+
+.sobre-img img {
+    max-width: 100%;
 }
 
 .btn-gradient {
@@ -176,7 +209,7 @@ section {
     text-align: center;
     padding: 20px;
     margin-bottom: 20px;
-    color: #ffffff;
+    color: #FEFDFF;
 }
 
 .servicos .container img {
@@ -204,17 +237,17 @@ section {
 
 /* SKILLS */
 
-.skills header{
+.skills header {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     text-align: center;
     padding: 20px;
     margin-bottom: 20px;
-    color: #ffffff;
+    color: #FEFDFF;
 }
 
-section.skills .container{
+section.skills .container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -227,21 +260,21 @@ section.skills .card {
     transition: transform 0.3s;
     text-align: center;
     border-radius: 10px;
-    box-shadow:  0px 5px 10px 5px rgba(0, 0, 0, 0.45);
+    box-shadow: 0px 5px 10px 5px rgba(0, 0, 0, 0.45);
 }
 
-section.skills .card:hover{
+section.skills .card:hover {
     transform: scale(1.2);
     cursor: pointer;
 }
 
-section.skills .card img{
+section.skills .card img {
     width: 100%;
     margin-bottom: 1rem;
     padding: 15px 13px;
 }
 
-section.skills .card h3{
+section.skills .card h3 {
     font-size: 1rem;
     margin-bottom: 1rem;
 }
@@ -267,7 +300,7 @@ section.contacts article {
 
 section.contacts h2 {
     width: 250px;
-    color: #fff;
+    color: #FEFDFF;
     text-align: center;
     margin: auto;
     margin-bottom: 20px;
@@ -287,11 +320,11 @@ section.contacts h2::after {
 
 section.contacts .phone b {
     font-family: 'DM Sans', sans-serif;
-    color: #ffffff;
+    color: #FEFDFF;
 }
 
 section.contacts .phone a {
-    color: #fff;
+    color: #FEFDFF;
     font-family: 'DM Sans', sans-serif;
 }
 
@@ -303,7 +336,7 @@ section.contacts .social div a {
     align-items: center;
     opacity: 1;
     color: #000000;
-    background: #fff;
+    background: #FEFDFF;
     transition-duration: 0.5s;
     -webkit-transition-duration: 0.3s;
     border-radius: 50%;
@@ -329,7 +362,7 @@ footer {
 }
 
 .footer {
-    color: #fff;
+    color: #FEFDFF;
 }
 
 footer .footer p {
@@ -337,11 +370,13 @@ footer .footer p {
 
 }
 
-.fa-solid, .fas {
+.fa-solid,
+.fas {
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 .fa-circle-up {
     position: fixed;
     opacity: 1;
@@ -360,23 +395,21 @@ footer .footer p {
     -moz-border-radius: 0.3125rem;
     -webkit-border-radius: 0.3125rem;
     background-size: 200% auto;
-    background-image: linear-gradient(
-      to right,
-      
-      #b2baba 100%
-    );
+    background-image: linear-gradient(to right,
+
+            #b2baba 100%);
     transition-duration: 0.3s;
     -moz-transition-duration: 0.3s;
     -webkit-transition-duration: 0.3s;
     box-shadow: 0 10px 6px -6px rgba(0, 0, 0, 0.5);
     -moz-box-shadow: 0 10px 6px -6px rgba(0, 0, 0, 0.5);
     -webkit-box-shadow: 0 10px 6px -6px rgba(0, 0, 0, 0.5);
-  }
-  
-  .fa-circle-up:hover {
+}
+
+.fa-circle-up:hover {
     background-position: right center;
     cursor: pointer;
-  }
+}
 
 
 
@@ -425,10 +458,13 @@ footer .footer p {
 
     main .container .main-text,
     main .container .main-img,
-    .sobre .container .sobre-text,
-    .sobre .container .sobre-img {
+    .sobre .container .sobre-text {
         width: 100%;
         text-align: center;
+    }
+
+    .sobre-img {
+        margin-top: 30px;
     }
 
     .servicos .container {
@@ -440,18 +476,23 @@ footer .footer p {
         margin: 15px auto;
     }
 
-    .skills .card{
+    .skills .card {
         flex-direction: column;
     }
 
-    section.contacts .container{
+    section.contacts .container {
         flex-direction: column;
     }
 }
 
 
 
- @media (max-width: 596px) {
+@media (max-width: 596px) {
+    .sobre-img {
+        margin-top: 30px;
+
+    }
+
     .servicos-text {
         margin-bottom: 0;
     }
@@ -459,31 +500,12 @@ footer .footer p {
     .servicos-text h2 {
         margin-bottom: 0;
     }
+
     .servicos .card {
         width: 90%;
     }
 
-    footer .footer p{
+    footer .footer p {
         font-size: 0.6rem;
     }
- }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
