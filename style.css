@@ -12,8 +12,8 @@ body {
 :root {
     --header: #312f2fbe;
     --vermelho: #f9004d;
-    --link-menu: #060505ce;
-    --menu-mobile: #050505d0;
+    --link-menu: #060505;
+    --menu-mobile: #050505;
     --background: #222222;
     --degrade-btn: linear-gradient(#f9004d, #fc2586);
 }
@@ -40,6 +40,7 @@ header,
 footer {
     background: var(--header);
 }
+
 nav {
     display: flex;
     justify-content: space-between;
@@ -72,7 +73,7 @@ nav {
 
 .ul li a {
     position: relative;
-    padding-bottom: 5px;/* Adciona um padding-bottom ao link */
+    padding-bottom: 5px; /* Adciona um padding-bottom ao link */
     color: #ffffff;
     text-decoration: none;
     font-size: 1.3rem;
@@ -409,6 +410,7 @@ footer .footer p {
 .fa-circle-up:hover {
     background-position: right center;
     cursor: pointer;
+    z-index: 2;
 }
 
 
@@ -423,6 +425,7 @@ footer .footer p {
         display: block;
         position: fixed;
         margin-left: 85%;
+        z-index: 2;
     }
 
     .ul {
@@ -432,9 +435,10 @@ footer .footer p {
         width: 100%;
         height: 100%;
         left: 100%;
-        transition: 0.3s;
+        transition: all 0.8s ease;
         flex-direction: column;
-        justify-content: center;
+        justify-content: center; 
+        z-index: 2;
     }
 
     .ul li {
@@ -444,7 +448,7 @@ footer .footer p {
 
     .ul.ativo {
         left: 0;
-        z-index: 1;
+        z-index: 2;
     }
 
     main .container,

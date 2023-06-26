@@ -20,5 +20,13 @@ menuLinks.forEach(link => {
     link.addEventListener('click', () => {
         menu.classList.remove('ativo');
         document.querySelector('.menu-icon img').src = './img/menu.png';
+        
+        const targetElement = document.querySelector(event.target.hash);
+        if (targetElement) {
+            window.scrollTo({
+                top: targetElement.offsetTop,
+                behavior: 'smooth'
+            });
+        }
     });
 });
