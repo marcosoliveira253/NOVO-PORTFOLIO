@@ -249,8 +249,6 @@ section {
     background-color: #8ba3b0;
 }
 
-
-
 .servicos .card:hover {
     transform: scale(1.2);
     cursor: pointer;
@@ -270,7 +268,6 @@ section {
     height: 214px;
     margin: 0 auto;
     padding: 10px;
-    object-fit: contain;
 }
 
 .servicos .card h3 {
@@ -335,7 +332,6 @@ section.skills .card {
     border-radius: 10px;
     box-shadow: 0px 5px 10px 5px rgba(0, 0, 0, 0.45);
 }
-
 
 section.skills .card:hover {
     transform: scale(1.2);
@@ -530,10 +526,6 @@ footer .footer p {
         z-index: 2;
     }
 
-    .main-text p {
-        width: 100%;
-    }
-
     main .container,
     .sobre .container {
         flex-direction: column;
@@ -579,18 +571,6 @@ footer .footer p {
     main .container .main-img {
         width: 80%;
     }
-<<<<<<< HEAD
-=======
-
-    .main-text p {
-        width: 100%;
-        white-space: normal;
-        animation: none;
-    }
-    
-    .sobre-img {
-        margin-top: 30px;
->>>>>>> d5fda9233b74fc5be57eff06e089d7862f5939e6
 
     .main-text p {
         width: 100%;
@@ -622,13 +602,13 @@ footer .footer p {
 
     section.servicos .card:hover {
         transform: scale(1.1) !important;
-    } 
+    }
 
     section.skills .card {
         margin: 20px;
     }
 
     footer .footer p {
-        font-size: 0.6rem;
+        font-size: 0.7rem;
     }
 }
