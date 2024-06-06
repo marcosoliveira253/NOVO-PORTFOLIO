@@ -1,5 +1,15 @@
 const menuIcon = document.querySelector('.menu-icon');
 var menu = document.querySelector('.ul');
+const backToTopButton = document.querySelector('.back-to-top');
+
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 200) {
+      backToTopButton.style.display = 'block'; // Mostra o ícone após rolar 200 pixels
+    } else {
+      backToTopButton.style.display = 'none'; // Oculta o ícone se não estiver rolando
+    }
+});
 
 menuIcon.addEventListener('click', ()=>{
     
