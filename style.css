@@ -270,6 +270,7 @@ section {
     height: 214px;
     margin: 0 auto;
     padding: 10px;
+    object-fit: contain;
 }
 
 .servicos .card h3 {
@@ -529,6 +530,10 @@ footer .footer p {
         z-index: 2;
     }
 
+    .main-text p {
+        width: 100%;
+    }
+
     main .container,
     .sobre .container {
         flex-direction: column;
@@ -574,6 +579,18 @@ footer .footer p {
     main .container .main-img {
         width: 80%;
     }
+<<<<<<< HEAD
+=======
+
+    .main-text p {
+        width: 100%;
+        white-space: normal;
+        animation: none;
+    }
+    
+    .sobre-img {
+        margin-top: 30px;
+>>>>>>> d5fda9233b74fc5be57eff06e089d7862f5939e6
 
     .main-text p {
         width: 100%;
